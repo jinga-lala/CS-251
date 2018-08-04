@@ -21,19 +21,13 @@ def find_total(x1,y1,x2,y2):
 			y=(slope*x+c)
 			if(int(y)==y):
 				dict={x:int(y)}
-				try:
-					i=stu.index(dict)
+				if(dict in stu):
 					print(x,y)
-				except ValueError:
-					continue
 	else:
 		for y in range(y1+1,y2):
 			dict={x1:y}
-			try:
-				i=stu.index(dict)
+			if(dict in stu)	
 				print(x1,y)
-			except ValueError:
-				continue
 # buff=input("Enter x1 y1 x2 y2 space seperated: \n")
 # [x1,y1,x2,y2]=[int(x) for x in buff.split()]
 # # print(stu)

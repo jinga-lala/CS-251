@@ -29,15 +29,13 @@ if __name__ == "__main__":
     snakeFile = open('snakes.txt', 'r')
     for line in snakeFile:
         if counter == 0:
-            [numSnakes] = line.split(" ")
-            numSnakes = int(numSnakes)
+            numSnakes = int(line)
         elif (counter > 0) and (counter <= numSnakes):
             [name, length, venom] = line.split(" ")
             Snake = snake(name, int(length), int(venom))
             snakesList.append(Snake)
         elif counter == numSnakes + 1:
-            [numQueries] = line.split(" ")
-            numQueries = int(numQueries)
+            numQueries = int(line)
         elif counter > numSnakes + 1 and counter <= numSnakes + 1 + numQueries:
             [command, number] = line.split(" ")
             if command == 'V':

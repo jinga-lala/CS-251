@@ -23,6 +23,17 @@ def makeTeams(teams,players):
 				team.append(player)
 			roster[pool_teams[i]]=team
 		return roster
+def get_min_loyalty(team,teams):
+	roster=teams[team]
+	m={}
+	min_loyalty=10
+	for p in roster:
+		if(p["Loyalty"]<min_loyalty):
+			m=p
+			min_loyalty=p["Loyalty"]
+	buff=m 
+	team.delete[m]
+	return buff
 
 
 if __name__=="__main__":
@@ -30,23 +41,34 @@ if __name__=="__main__":
 	db=open("database.json","w")
 	teams=makeTeams(10,100)
 	json.dump(teams,db)
-	transfers=tr.readlines()
+	transfers=tr.readlines()[1:]
+	count=0
 	for t in transfers:
-		team=t.split('\t')[0]
-		jersey=int(t.split('\t')[1])
+		team=t.split()[0]
+		jersey=int(t.split()[1])
 		if(jersey not in (1,1001)):
-			raise ValueError("jersey does not exist")
+			print("jersey does not exist")
+			continue
 		if (team not in list(teams.keys())):
-			raise ValueError("Team does not exist")
+			print("Team does not exist")
+			continue
 		f=0
 		for p in teams:
-			try:
-				if(p["Jeresey"]==jersey):
+			for k in teams[p]:
+				# print(k)
+				if(k["Jeresey"]==jersey):
 					f=1
-					print("Transfer completed")
-					'''
-					TODO
-					Return minimum loyalty player from somewhere else
-					HAndle other exceptions
-					'''
+					if(k["Loyalty"]>7):
+						print("Loyalty exceeded, try another player")
+					else:
+						buff=k
+						teams[p].delete(k)
+						teams[p].append(get_min_loyalty(team,teams))
+						teams[team].append(buff)
+						count+=1
+						print("Player transferred")
+		if(f==0):
+			print("Jersey does not exist")
+	print(count)
+
 

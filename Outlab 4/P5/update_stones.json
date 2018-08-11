@@ -1,0 +1,34 @@
+{
+    "Infinty Stones": [
+        {
+            "Stone Color": "Blue", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Space Stone"
+        }, 
+        {
+            "Stone Color": "Yellow", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Mind Stone"
+        }, 
+        {
+            "Stone Color": "Red", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Reality Stone"
+        }, 
+        {
+            "Stone Color": "Purple", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Power Stone"
+        }, 
+        {
+            "Stone Color": "Green", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Time Stone"
+        }, 
+        {
+            "Stone Color": "Orange", 
+            "Containment Unit": "Infinity Gauntlet", 
+            "Stone Name": "Soul Stone"
+        }
+    ]
+}

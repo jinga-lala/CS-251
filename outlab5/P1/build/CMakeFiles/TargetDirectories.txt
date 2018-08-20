@@ -1,0 +1,10 @@
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/install/strip.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/install/local.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/install.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/list_install_components.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/usespthread.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/MyEngineStatic.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/edit_cache.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/helloworld.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/MyEngineDynamic.dir
+/home/yash/Desktop/outlab5-solutions/P1/build/CMakeFiles/rebuild_cache.dir

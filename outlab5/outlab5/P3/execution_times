@@ -1,0 +1,24 @@
+Makefile:743: update target 'pathnames.h' due to: Makefile
+Makefile:603: update target 'version.h' due to: execute_cmd.c
+Makefile:610: update target 'buildversion.o' due to: version.h
+Makefile:607: update target 'bashversion' due to: version.h buildversion.o
+Makefile:578: update target '.build' due to: execute_cmd.c version.h bashversion
+Makefile:98: update target 'execute_cmd.o' due to: execute_cmd.c
+Makefile:98: update target 'variables.o' due to: version.h
+Makefile:98: update target 'version.o' due to: version.h
+Makefile:708: update target 'builtins/libbuiltins.a' due to: version.h
+Makefile:647: update target 'lib/glob/libglob.a' due to: .build
+Makefile:123: update target '/home/yash/Downloads/bash-4.4/pathnames.h' due to: /home/yash/Downloads/bash-4.4/Makefile Makefile
+Makefile:743: update target 'pathnames.h' due to: Makefile
+Makefile:662: update target 'lib/sh/libsh.a' due to: .build
+Makefile:142: update target '/home/yash/Downloads/bash-4.4/pathnames.h' due to: /home/yash/Downloads/bash-4.4/Makefile Makefile
+Makefile:743: update target 'pathnames.h' due to: Makefile
+Makefile:637: update target 'lib/readline/libreadline.a' due to: .build
+Makefile:642: update target 'lib/readline/libhistory.a' due to: .build
+Makefile:657: update target 'lib/termcap/libtermcap.a' due to: .build
+Makefile:652: update target 'lib/tilde/libtilde.a' due to: .build
+Makefile:399: update target 'lib/malloc/libmalloc.a' due to: .build
+Makefile:85: update target 'malloc' due to: malloc.o trace.o stats.o table.o watch.o
+Makefile:572: update target 'bash' due to: .build execute_cmd.o variables.o version.o lib/malloc/libmalloc.a
+Makefile:587: update target 'bashbug' due to: bashversion
+Makefile:569: update target '.made' due to: bash bashbug

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yash/Desktop/outlab5-solutions/P1/myengine/myengine.cpp
+myengine.hpp
+/home/yash/Desktop/outlab5-solutions/P1/myengine/myengine.hpp
+
+/home/yash/Desktop/outlab5-solutions/P1/myengine/myengine.hpp
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+

@@ -1,24 +1,26 @@
 import sqlite3
-import sys
+# import sys
 
 if __name__=="__main__":
-	arg=sys.argv[1]
+	# arg=sys.argv[1]
 	ipl=sqlite3.connect("ipl.db")
 	cur=ipl.cursor()
-	args=arg.splitlines()
+	choice=input()
+	len_dict={'1':2,'2':6,'3':15,'4':8,'5':11}
 	values=[]
-	for a in args[1:]:
+	for i in range(len_dict[choice]):
+		inp=input()
 		try:
-			values.append(int(a))
+			values.append(int(inp))
 		except:
-			values.append(a)
+			values.append(inp)
 	
 	table_dict={'1':'team','2':'player','3':'match','4':'player_match','5':'ball_by_ball'}
-	# print(values)
+	print(values)
 	s=',?'*len(values)
 	s='('+s[1:]+')'
 	# print(s)
-	command='insert into '+table_dict[args[0]]+' values'+s
+	command='insert into '+table_dict[choice]+' values'+s
 	cur.execute(command,values)
 	ipl.commit()
 	ipl.close()	

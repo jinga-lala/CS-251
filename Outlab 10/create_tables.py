@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     cur.execute('''CREATE TABLE BALL_BY_BALL (match_id int,  innings_no	int, over_id int,  ball_id int, striker_batting_position int,  runs_scored int,
     extra_runs	int, out_type text , striker int, non_striker	int, bowler int, primary key (match_id, innings_no, over_id, ball_id),foreign key (striker) references PLAYER(player_id),
-    foreign key (non_striker) references PLAYER(player_id), foreign key (match_id) references MATCH(match_id))''')
+    foreign key (non_striker) references PLAYER(player_id), foreign key (match_id) references MATCH(match_id), foreign key (bowler) references PLAYER(player_id))''')
 
     ipl.commit()
     ipl.close()

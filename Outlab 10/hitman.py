@@ -9,12 +9,17 @@ if __name__ == "__main__":
     d1 = sixes.fetchall()
     d2 = balls.fetchall()
     list_fraction = []
-    for a in d1:
-        for b in d2:
+    for b in d2:
+        f = 0
+        for a in d1:
             if b[0] == a[0]:
                 c = [a[0], a[1], a[2], b[2], a[2] * 1.0 / b[2]]
                 list_fraction.append(c)
+                f = 1
                 break
+        if f == 0:
+            c = [b[0], b[1], 0, b[2], 0.0]
+            list_fraction.append(c)
     list_fraction.sort(key=lambda x: x[4], reverse=True)
     for item in list_fraction:
         print(str(item[0]) + "," + item[1] + "," + str(item[2]) + "," + str(item[3]) + "," + str(item[4]))
